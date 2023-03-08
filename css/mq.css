@@ -130,16 +130,23 @@
     letter-spacing: 0.1vw;
   }
   .contents-desc {
-    font-size: 2.1vw;
-    letter-spacing: 0.1vw;
+    font-size: 2vw;
   }
   .contents a {
     font-size: 2vw;
     letter-spacing: 0.2vw;
+    margin-top: -1.5vw;
   }
   .contents ul li {
+    font-size: 2vw;
+    /* margin-top: -1vw; */
+  }
+  #contact p {
     font-size: 3vw;
-    margin-top: -1vw;
+    margin-bottom: -1vw;
+  }
+  #contact address {
+    margin-bottom: -4vw;
   }
   #footer-logo img {
     width: 20vw;
