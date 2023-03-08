@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: hsla(51, 88%, 95%, 0.7);
+  font-family: 'Raleway', sans-serif;
+}
+/* utilities */
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.rounded-edge {
+  /* border: solid 2px red; */
+  border-radius: 10px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo img {
+  height: 12vh;
+  width: 8vw;
+}
+nav {
+  height: 5vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3vh 1vh;
+  background-color: hsla(148, 17%, 27%, 0.5);
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.3);
+}
+
+nav,
+#main-container,
+#footer-container {
+  width: 90vw;
+  margin: 1vh 0 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 2.75vw;
+  padding: 0 2vw;
+  color: hsl(51, 53%, 87%);
+  text-shadow: 5px 5px 5px black;
+  transition: all 1s;
+}
+nav ul li a:hover {
+  transform: translateY(5px);
+  text-shadow: none;
+}
+main,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#main-container {
+  height: 95vw;
+  display: grid;
+  grid-template-columns: repeat(3, 29.1vw);
+  grid-template-rows: 29.1vh, 29.1vh;
+  grid-template-areas:
+    'offer offer offer'
+    'services quote contact';
+  overflow: hidden;
+  grid-gap: 1vh;
+
+  padding-bottom: 1vh;
+}
+
+#offer {
+  grid-area: offer;
+  background-image: url(../media/hero-plant.svg);
+  box-shadow: 5px 5px 5px black;
+  padding: 0.5vw;
+  position: relative;
+}
+/* @import url(https://fonts.googleapis.com/css?family=Khula:700);
+body {
+  background: #111;
+} */
+.hidden {
+  opacity: 0;
+}
+.console-container {
+  font-family: Khula;
+  font-size: 2vw;
+  text-align: center;
+  height: 4vw;
+  width: 54vw;
+  line-height: 4vw;
+  display: block;
+  background-color: hsla(148, 27%, 27%, 0.5);
+  position: absolute;
+  color: white;
+  top: 26vw;
+  bottom: 0;
+  left: -33vw;
+  right: 0;
+  margin: auto;
+}
+#offer .console-underscore {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5vw;
+  background-color: none;
+  top: 0;
+  left: 0;
+}
+
+#offer .promo {
+  z-index: 1;
+  padding: 1vw;
+  width: 54vw;
+  height: 24.75vw;
+  background-color: hsla(148, 27%, 27%, 0.5);
+
+  color: hsl(51, 88%, 90%);
+}
+#offer div h2 {
+  font-size: 3vw;
+}
+#offer div ul li {
+  font-size: 1.65vw;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  box-shadow: 5px 5px 5px black;
+  background-color: hsla(51, 88%, 88%);
+  padding: 1vh;
+}
+#services {
+  grid-area: services;
+}
+.sub-heading {
+  font-size: 2.1vw;
+  text-align: center;
+}
+
+.contents-desc {
+  font-size: 1.65vw;
+  padding: 1vh;
+  letter-spacing: 0.12vw;
+  text-align: left;
+}
+.contents img {
+  width: 90%;
+  height: 30%;
+  margin: 1vh auto 0 auto;
+}
+
+.contents ul li {
+  list-style: none;
+}
+#quote {
+  grid-area: quote;
+}
+#contact {
+  grid-area: contact;
+}
+#footer-container {
+  height: 20vh;
+  background-color: hsla(148, 17%, 27%, 0.5);
+  display: flex;
+}
+
+#footer-logo,
+#copyright {
+  width: 50%;
+}
+
+#footer-logo img {
+  width: 13vw;
+  height: 13vh;
+  margin: 2vw;
+  padding: 0.5vw;
+  background-color: hsl(38, 33%, 50%);
+  border: ridge 1vw hsl(51, 88%, 90%);
+}
+
+#copyright p {
+  font-size: 1.5vw;
+  text-align: right;
+  padding: 0 1vw 0 0;
+}
+
+#copyright ul {
+  display: flex;
+  justify-content: right;
+}
+
+#copyright ul li {
+  display: inline-block;
+  margin: 0 0.5vw;
+  list-style: none;
+}
+
+#copyright img {
+  width: 3vw;
+  height: 3vw;
+}

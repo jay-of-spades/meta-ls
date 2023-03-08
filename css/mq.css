@@ -1,0 +1,160 @@
+@media (max-width: 425px) {
+  #logo img {
+    height: 15vh;
+    width: 15vw;
+  }
+  nav {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3vh 1vh;
+    border-radius: 5px;
+    background-color: hsla(148, 17%, 27%, 0.5);
+    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.3);
+    transition: all 0.6s linear;
+  }
+  nav.active {
+    height: 5vh;
+    width: 95vw;
+    border-radius: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 0;
+
+    transition: width 0.6 linear;
+  }
+  nav.active ul {
+    width: 100%;
+    margin: 0 10vw 0 0;
+  }
+  nav ul li {
+    list-style: none;
+    transform: rotateY('0deg');
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+  }
+  nav.active ul li {
+    transform: rotateY('360deg');
+    opacity: 1;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 2vh;
+    padding: 0 2vw;
+    color: hsl(51, 53%, 87%);
+    position: relative;
+  }
+
+  .icon {
+    background-color: hsla(148, 17%, 27%, 0);
+    position: relative;
+    border: 0;
+    top: 1px;
+    left: -35px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+  }
+
+  .icon:focus {
+    outline: 0;
+  }
+
+  .icon .line {
+    background-color: hsl(51, 53%, 87%);
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+  }
+
+  .icon .line2 {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    transition: transform 0.6s linear;
+  }
+
+  nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+  }
+
+  nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+  }
+  #main-container {
+    height: 97vh;
+    width: 85vw;
+    grid-template-columns: repeat(2, 41vw);
+    grid-template-rows: repeat(3, 31vh);
+    gap: 2vw;
+    grid-template-areas:
+      'offer offer'
+      'services quote'
+      'contact contact';
+  }
+  #offer {
+    width: 80vw;
+    height: 27vh;
+    padding: 2vw;
+  }
+  #offer .promo {
+    width: 65vw;
+    height: 30.75vw;
+  }
+  .console-container {
+    font-size: 3vw;
+    width: 65vw;
+    top: 20;
+    left: -15vw;
+  }
+  #offer div h2 {
+    font-size: 3.5vw;
+  }
+  #offer div ul li {
+    font-size: 2.65vw;
+    letter-spacing: 0.2vw;
+  }
+
+  .sub-heading {
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+  }
+  .contents-desc {
+    font-size: 2.1vw;
+    letter-spacing: 0.1vw;
+  }
+  .contents a {
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+  }
+  .contents ul li {
+    font-size: 3vw;
+    margin-top: -1vw;
+  }
+  #footer-logo img {
+    width: 20vw;
+    border: ridge 2vw hsl(51, 88%, 90%);
+  }
+  #copyright p {
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+  }
+  #copyright ul li {
+    margin: 0 0.75vw;
+  }
+
+  #copyright img {
+    width: 5vw;
+    height: 5vw;
+  }
+}
